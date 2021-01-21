@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import styled, {createGlobalStyle} from "styled-components"
+
+const Global = createGlobalStyle`
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+`
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <>
+      <Global/>
+      <App />
+    </>,
   document.getElementById('root')
 );
 
