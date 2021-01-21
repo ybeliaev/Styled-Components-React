@@ -18,12 +18,12 @@ const AppWrapper = styled.div`
 function App() {
   return (
     <AppWrapper>
-      <Flex>
+      <Flex justify={"center"}>
           <Title color="DarkGreen">Console cmd 2021. Jorgen</Title>
       </Flex>
-      <Flex direction="column">
-          <Console/>
-          <Button outlined color={'green'} align={"flex-end"}>Send</Button>
+      <Flex direction="column" margin="10px 0">
+          <Console />
+          <Button color={'green'} align={"flex-end"}>Send</Button>
       </Flex>
 
     </AppWrapper>

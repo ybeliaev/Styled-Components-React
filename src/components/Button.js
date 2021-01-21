@@ -1,11 +1,24 @@
 import React from 'react';
 
-import styled, {css} from "styled-components"
+import styled, {css, keyframes} from "styled-components"
 
-const StyledButton = styled.button`
+const RotateAnimation = keyframes`
+    from {
+    transform: rotate(0deg);
+    }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+`
+
+const StyledButton = styled.button.attrs(props=>({
+    outlined: true,
+}))`
     border: none;
-    padding: 10px 16px;
-    font-size: 18px;
+    padding: 12px 24px;
+    font-size: 20px;
     cursor: pointer;
     text-transform: uppercase;
     border-radius: 4px;
@@ -27,9 +40,11 @@ const StyledButton = styled.button`
     transition: all 0.3s;
     &:hover{    
        box-shadow: inset -1px 0px 15px 0px rgba(0, 100, 0, 1), 0px 0px 20px 0px rgba(0, 100, 0, 1); 
+       animation: ${RotateAnimation} 1s infinite linear;
     }
     &:active{    
        box-shadow: inset -1px 0px 25px -0px rgba(0, 100, 0, 1), 0px 0px 40px 0px rgba(0, 100, 0, 1); 
+       animation: ${RotateAnimation} 1s, pause-between-iterations 4s;
        transform: translateY(3px);
     }
     
