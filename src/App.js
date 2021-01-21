@@ -15,7 +15,7 @@ function App() {
   return (
     <AppWrapper>
       <header className="App-header">
-        <Title>Asss</Title>
+        <Title color={"DarkGreen"}>Asss</Title>
       </header>
     </AppWrapper>
   );
